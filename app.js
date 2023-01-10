@@ -1,13 +1,13 @@
 /* Imports */
 
 /* Get DOM Elements */
-const cupOneEl = document.getElementById('cup-one');
-const cupTwoEl = document.getElementById('cup-two');
-const cupThreeEl = document.getElementById('cup-three');
+const cardOneEl = document.getElementById('card-one');
+const cardTwoEl = document.getElementById('card-two');
+const cardThreeEl = document.getElementById('card-three');
 
-const ballOne = document.getElementById('ball-one');
-const ballTwo = document.getElementById('ball-two');
-const ballThree = document.getElementById('ball-three');
+const queenOne = document.getElementById('queen-one');
+const queenTwo = document.getElementById('queen-two');
+const queenThree = document.getElementById('queen-three');
 
 const buttonOne = document.getElementById('button-one');
 const buttonTwo = document.getElementById('button-two');
@@ -20,36 +20,36 @@ let correctGuesses = 0;
 let incorrectGuesses = 0;
 
 buttonOne.addEventListener('click', () => {
-    const ballIsHere = whereIsTheBall();
-    outcome('one', ballIsHere);
+    const queenIsHere = whereIsThequeen();
+    outcome('one', queenIsHere);
 });
 
 buttonTwo.addEventListener('click', () => {
-    const ballIsHere = whereIsTheBall();
-    outcome('two', ballIsHere);
+    const queenIsHere = whereIsThequeen();
+    outcome('two', queenIsHere);
 });
 
 buttonThree.addEventListener('click', () => {
-    const ballIsHere = whereIsTheBall();
-    outcome('three', ballIsHere);
+    const queenIsHere = whereIsThequeen();
+    outcome('three', queenIsHere);
 });
 
-function whereIsTheBall() {
+function whereIsThequeen() {
     const hidingSpot = ['one', 'two', 'three'];
     const index = Math.floor(Math.random() * hidingSpot.length);
 
-    const ballIsHere = hidingSpot[index];
+    const queenIsHere = hidingSpot[index];
 
-    return ballIsHere;
+    return queenIsHere;
 }
 
-function outcome(userGuess, ballIsHere) {
-    if (ballIsHere === userGuess) {
+function outcome(userGuess, queenIsHere) {
+    if (queenIsHere === userGuess) {
         correctGuesses++;
     } else {
         incorrectGuesses++;
     }
-    const correctAnswer = document.getElementById(`cup-${ballIsHere}`);
+    const correctAnswer = document.getElementById(`card-${queenIsHere}`);
 
     wins.textContent = correctGuesses;
     losses.textContent = incorrectGuesses;
@@ -57,8 +57,8 @@ function outcome(userGuess, ballIsHere) {
     correctAnswer.classList.toggle('hide');
 }
 
-function hideBalls() {
-    ballOne.classList.toggle('hide');
-    ballTwo.classList.toggle('hide');
-    ballThree.classList.toggle('hide');
+function hidequeens() {
+    queenOne.classList.toggle('hide');
+    queenTwo.classList.toggle('hide');
+    queenThree.classList.toggle('hide');
 }
