@@ -76,15 +76,14 @@ main {
 
 .ball {
     width: 40px;
-}
-
-.win-text {
-}
-
-.loss-text {
+    display: flex;
 }
 
 .score {
     display: flex;
     justify-content: space-around;
+}
+
+.hide {
+    display: none;
 }
