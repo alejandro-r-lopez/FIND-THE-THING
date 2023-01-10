@@ -18,7 +18,6 @@ const losses = document.getElementById('loss-text');
 
 let correctGuesses = 0;
 let incorrectGuesses = 0;
-let total = 0;
 
 buttonOne.addEventListener('click', () => {
     const ballIsHere = whereIsTheBall();
@@ -45,8 +44,6 @@ function whereIsTheBall() {
 }
 
 function outcome(userGuess, ballIsHere) {
-    hideBalls();
-
     if (ballIsHere === userGuess) {
         correctGuesses++;
     } else {
@@ -57,11 +54,11 @@ function outcome(userGuess, ballIsHere) {
     wins.textContent = correctGuesses;
     losses.textContent = incorrectGuesses;
 
-    correctAnswer.classList.remove('hide');
+    correctAnswer.classList.toggle('hide');
 }
 
 function hideBalls() {
-    ballOne.classList.add('hide');
-    ballTwo.classList.add('hide');
-    ballThree.classList.add('hide');
+    ballOne.classList.toggle('hide');
+    ballTwo.classList.toggle('hide');
+    ballThree.classList.toggle('hide');
 }
