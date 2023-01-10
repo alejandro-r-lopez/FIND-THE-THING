@@ -33,3 +33,58 @@ header .logo {
 main {
     padding: 20px;
 }
+
+.title {
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.all-cups {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 50px;
+}
+
+.cup {
+    width: 200px;
+}
+
+.all-buttons {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 100px;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    position: relative;
+}
+.all-balls {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 100px;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    position: relative;
+}
+.cup-button {
+    height: 100px;
+    width: 100px;
+    border-radius: 50px;
+    border: none;
+    background-color: black;
+    position: relative;
+}
+
+.ball {
+    width: 40px;
+}
+
+.win-text {
+}
+
+.loss-text {
+}
+
+.score {
+    display: flex;
+    justify-content: space-around;
+}

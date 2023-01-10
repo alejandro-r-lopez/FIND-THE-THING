@@ -1,39 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <!-- metadata -->
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-<head>
-    <!-- metadata -->
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <!-- title and favicon -->
+        <title>Web App</title>
+        <link rel="icon" type="image/x-icon" href="assets/alchemy-favicon.png" />
 
-    <!-- title and favicon -->
-    <title>Web App</title>
-    <link rel="icon" type="image/x-icon" href="assets/alchemy-favicon.png" />
+        <!-- js -->
+        <script type="module" src="app.js"></script>
 
-    <!-- js -->
-    <script type="module" src="app.js"></script>
+        <!-- fonts -->
+        <!-- see https://fonts.google.com/ -->
 
-    <!-- fonts -->
-    <!-- see https://fonts.google.com/ -->
+        <!-- css -->
+        <link rel="stylesheet" href="styles/reset.css" />
+        <link rel="stylesheet" href="styles/global.css" />
+        <!-- add link for page specific css -->
+    </head>
 
-    <!-- css -->
-    <link rel="stylesheet" href="styles/reset.css" />
-    <link rel="stylesheet" href="styles/global.css" />
-    <!-- add link for page specific css -->
+    <body>
+        <header>
+            <img class="logo" src="assets/html_css_js.png" alt="logo" />
+            <h1>Web App</h1>
+        </header>
 
-</head>
+        <main>
+            <section>
+                <h1 class="title">Guessing Game</h1>
+            </section>
 
-<body>
-    <header>
-        <img class="logo" src="assets/html_css_js.png" alt="logo">
-        <h1>Web App</h1>
-    </header>
+            <section class="all-cups">
+                <div>
+                    <img class="cup" id="cup-one" src="assets/redcup.png" />
+                    <img class="ball" id="ball" src="assets/ball.png" />
+                </div>
 
-    <main>
+                <div>
+                    <img class="cup" id="cup-two" src="assets/redcup.png" />
+                    <img class="ball" id="ball" src="assets/ball.png" />
+                </div>
 
-    </main>
-
-</body>
-
+                <div>
+                    <img class="cup" id="cup-three" src="assets/redcup.png" />
+                    <img class="ball" id="ball" src="assets/ball.png" />
+                </div>
+            </section>
+            <section class="all-buttons">
+                <button class="cup-button" id="cup-one"></button>
+                <button class="cup-button" id="cup-two"></button>
+                <button class="cup-button" id="cup-three"></button>
+            </section>
+            <section class="score">
+                <h2 class="win-text">Total Wins</h2>
+                <h2 class="loss-text">Total Losses</h2>
+            </section>
+        </main>
+    </body>
 </html>
