@@ -70,6 +70,7 @@ function outcome(userGuess, queenIsHere) {
     if (queenIsHere === 'three') {
         queenThree.classList.toggle('hide');
     }
+    setTimeout(removeQueens, 1200);
 }
 
 function removeQueens() {
