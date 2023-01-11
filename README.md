@@ -1,4 +1,26 @@
-## The Golden Rule:
+![wireframe of hide and seek](assets/HIDENSEEK.wireframe.png)
+
+# HTML
+
+-   sections - seperate hiding places from log
+
+-   3 img - hiding places
+
+-   1 img - hiding thing
+
+-   3 buttons - guess hiding place
+
+-   div - log wins, losses, and total
+
+# STATE
+
+-   click
+
+-   generate random hiding spot
+
+-   counter to log games
+
+<!-- ## The Golden Rule:
 
 🦸 🦸‍♂️ `Stop starting and start finishing.` 🏁
 
@@ -24,4 +46,4 @@ Additional considerations:
     -   What arrays might you need?
     -   What needs to live in a persistence layer?
 -   Is there some state we need to initialize?
--   Ask: should any of this work be abstracted into functions? (i.e., is the work complicated? can it be reused?)
+-   Ask: should any of this work be abstracted into functions? (i.e., is the work complicated? can it be reused?) -->

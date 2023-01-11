@@ -1,39 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <!-- metadata -->
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-<head>
-    <!-- metadata -->
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <!-- title and favicon -->
+        <title>Web App</title>
+        <link rel="icon" type="image/x-icon" href="assets/alchemy-favicon.png" />
 
-    <!-- title and favicon -->
-    <title>Web App</title>
-    <link rel="icon" type="image/x-icon" href="assets/alchemy-favicon.png" />
+        <!-- js -->
+        <script type="module" src="app.js"></script>
 
-    <!-- js -->
-    <script type="module" src="app.js"></script>
+        <!-- fonts -->
+        <!-- see https://fonts.google.com/ -->
 
-    <!-- fonts -->
-    <!-- see https://fonts.google.com/ -->
+        <!-- css -->
+        <link rel="stylesheet" href="styles/reset.css" />
+        <link rel="stylesheet" href="styles/global.css" />
+        <!-- add link for page specific css -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Rye&display=swap" rel="stylesheet" />
+    </head>
 
-    <!-- css -->
-    <link rel="stylesheet" href="styles/reset.css" />
-    <link rel="stylesheet" href="styles/global.css" />
-    <!-- add link for page specific css -->
+    <body>
+        <main>
+            <section>
+                <h1 class="title">PICK-A-CARD</h1>
+                <h1 class="rounds"><span>ROUND</span><span id="total">0</span></h1>
+            </section>
 
-</head>
+            <section class="all-cards">
+                <div>
+                    <img class="card" id="card-one" src="assets/playingcard.png" />
+                    <img class="queen hide" id="queen-one" src="assets/queencard.png" />
+                </div>
 
-<body>
-    <header>
-        <img class="logo" src="assets/html_css_js.png" alt="logo">
-        <h1>Web App</h1>
-    </header>
+                <div>
+                    <img class="card" id="card-two" src="assets/playingcard.png" />
+                    <img class="queen hide" id="queen-two" src="assets/queencard.png" />
+                </div>
 
-    <main>
-
-    </main>
-
-</body>
-
+                <div>
+                    <img class="card" id="card-three" src="assets/playingcard.png" />
+                    <img class="queen hide" id="queen-three" src="assets/queencard.png" />
+                </div>
+            </section>
+            <section class="all-buttons">
+                <button class="card-button" id="button-one">1</button>
+                <button class="card-button" id="button-two">2</button>
+                <button class="card-button" id="button-three">3</button>
+            </section>
+            <section class="score">
+                <h2>WINS &nbsp</h2>
+                <h2 class="win-text" id="win-text">0</h2>
+                <h2>/</h2>
+                <h2 class="loss-text" id="loss-text">0</h2>
+                <h2>&nbsp LOSSES</h2>
+            </section>
+        </main>
+    </body>
 </html>
