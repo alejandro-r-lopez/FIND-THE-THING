@@ -1,13 +1,14 @@
 :root {
-    --background: rgb(224, 234, 247);
     --header-background: rgb(254, 251, 245);
     --primary-font: Corbel, 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', 'DejaVu Sans',
         'Bitstream Vera Sans', 'Liberation Sans', Verdana, 'Verdana Ref', sans-serif;
 }
 
 body {
+    background-image: url('/assets/green.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
     font-family: var(--primary-font);
-    background: var(--background);
     display: grid;
     grid-template-rows: auto 1fr;
 }
@@ -71,8 +72,13 @@ main {
     width: 100px;
     border-radius: 50px;
     border: none;
-    background-color: black;
     position: relative;
+    background-image: url('/assets/pokerChip.png');
+    background-size: 164px;
+    background-position: center;
+    font-size: 42px;
+    color: white;
+    font-family: 'Rye';
 }
 
 .queen {
@@ -85,5 +91,29 @@ main {
 
 .score {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    font-family: 'Rye';
+    font-size: 18px;
+}
+
+.hide {
+    display: none;
+}
+
+.title {
+    background: linear-gradient(#492000, #f0e000);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-family: 'Rye';
+    font-size: 72px;
+    font-weight: lighter;
+}
+
+.rounds {
+    position: absolute;
+    right: 80px;
+    bottom: 750px;
+    font-family: 'Rye';
+    display: grid;
+    text-align: center;
 }

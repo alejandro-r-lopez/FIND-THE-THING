@@ -20,12 +20,16 @@
         <link rel="stylesheet" href="styles/reset.css" />
         <link rel="stylesheet" href="styles/global.css" />
         <!-- add link for page specific css -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Rye&display=swap" rel="stylesheet" />
     </head>
 
     <body>
         <main>
             <section>
-                <h1 class="title">Guessing Game</h1>
+                <h1 class="title">PICK-A-CARD</h1>
+                <h1 class="rounds"><span>ROUND</span><span id="total">0</span></h1>
             </section>
 
             <section class="all-cards">
@@ -45,13 +49,16 @@
                 </div>
             </section>
             <section class="all-buttons">
-                <button class="card-button" id="button-one"></button>
-                <button class="card-button" id="button-two"></button>
-                <button class="card-button" id="button-three"></button>
+                <button class="card-button" id="button-one">1</button>
+                <button class="card-button" id="button-two">2</button>
+                <button class="card-button" id="button-three">3</button>
             </section>
             <section class="score">
-                <h2 class="win-text" id="win-text">Total Wins</h2>
-                <h2 class="loss-text" id="loss-text">Total Losses</h2>
+                <h2>WINS &nbsp</h2>
+                <h2 class="win-text" id="win-text">0</h2>
+                <h2>/</h2>
+                <h2 class="loss-text" id="loss-text">0</h2>
+                <h2>&nbsp LOSSES</h2>
             </section>
         </main>
     </body>

@@ -15,26 +15,28 @@ const buttonThree = document.getElementById('button-three');
 
 const wins = document.getElementById('win-text');
 const losses = document.getElementById('loss-text');
+const total = document.getElementById('total');
 
 let correctGuesses = 0;
 let incorrectGuesses = 0;
+let totalGuesses = 0;
 
 buttonOne.addEventListener('click', () => {
-    const queenIsHere = whereIsThequeen();
+    const queenIsHere = whereIsTheQueen();
     outcome('one', queenIsHere);
 });
 
 buttonTwo.addEventListener('click', () => {
-    const queenIsHere = whereIsThequeen();
+    const queenIsHere = whereIsTheQueen();
     outcome('two', queenIsHere);
 });
 
 buttonThree.addEventListener('click', () => {
-    const queenIsHere = whereIsThequeen();
+    const queenIsHere = whereIsTheQueen();
     outcome('three', queenIsHere);
 });
 
-function whereIsThequeen() {
+function whereIsTheQueen() {
     const hidingSpot = ['one', 'two', 'three'];
     const index = Math.floor(Math.random() * hidingSpot.length);
 
@@ -44,21 +46,34 @@ function whereIsThequeen() {
 }
 
 function outcome(userGuess, queenIsHere) {
+    removeQueens();
+
     if (queenIsHere === userGuess) {
         correctGuesses++;
     } else {
         incorrectGuesses++;
     }
-    const correctAnswer = document.getElementById(`card-${queenIsHere}`);
+    // const correctAnswer = document.getElementById(`card-${queenIsHere}`);
+
+    totalGuesses++;
 
     wins.textContent = correctGuesses;
     losses.textContent = incorrectGuesses;
+    total.textContent = totalGuesses;
 
-    correctAnswer.classList.toggle('hide');
+    if (queenIsHere === 'one') {
+        queenOne.classList.toggle('hide');
+    }
+    if (queenIsHere === 'two') {
+        queenTwo.classList.toggle('hide');
+    }
+    if (queenIsHere === 'three') {
+        queenThree.classList.toggle('hide');
+    }
 }
 
-function hidequeens() {
-    queenOne.classList.toggle('hide');
-    queenTwo.classList.toggle('hide');
-    queenThree.classList.toggle('hide');
+function removeQueens() {
+    queenOne.classList.add('hide');
+    queenTwo.classList.add('hide');
+    queenThree.classList.add('hide');
 }
