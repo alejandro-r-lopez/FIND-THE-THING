@@ -5,9 +5,10 @@
 }
 
 body {
-    background-image: url('/assets/green.jpg');
+    background-color: rgb(0, 92, 0);
+    /* background-image: url('/assets/green.jpg');
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover; */
     font-family: var(--primary-font);
     display: grid;
     grid-template-rows: auto 1fr;
@@ -94,6 +95,7 @@ main {
     justify-content: center;
     font-family: 'Rye';
     font-size: 18px;
+    color: white;
 }
 
 .hide {
@@ -101,9 +103,10 @@ main {
 }
 
 .title {
-    background: linear-gradient(#492000, #f0e000);
+    color: white;
+    /* background: linear-gradient(#492000, #f0e000);
     -webkit-background-clip: text;
-    color: transparent;
+    color: transparent; */
     font-family: 'Rye';
     font-size: 72px;
     font-weight: lighter;
